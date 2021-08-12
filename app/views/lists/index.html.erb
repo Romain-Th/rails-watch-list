@@ -1,0 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);">
+  <div class="container">
+    <h1>This is your <strong>films list</strong>!</h1>
+    <p><%= link_to "Add a new list", new_list_path,  class: 'btn btn-primary'%></p>
+  </div>
+</div>
+
+<ul>
+
+  <% @lists.each do |list| %>
+    <li> <div class="card-product">
+  <img src="https://images.pexels.com/photos/7234218/pexels-photo-7234218.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+  <div class="card-product-infos">
+    <h2><%= link_to "#{list.name}", list_path(list)%></h2>
+    <p>Great film to be watched !! <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+    <% end %><li>
+
+</ul>
